@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style_members.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link rel="icon" href="assets/logo.png" type="image/icon type" />
+  <title>Estrella Productions</title>
+</head>
+
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light"">
+    <a class=" navbar-brand d-lg-none" href="#"><img src="assets/logo.png" /></a>
+
+    <button class="navbar-toggler second-button" type="button" data-toggle="collapse" data-target="#myNavbarToggler7"
+      aria-controls="myNavbarToggler7" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon2">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </button>
+
+    <div class="collapse navbar-collapse" id="myNavbarToggler7">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="events.html">EVENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="productions.html">PRODUCTIONS</a>
+        </li>
+        <li class="nav-item">
+          <a class="d-none d-lg-block" href="#"><img src="assets/logo.png" style="width: 170px; height: 170px" /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="members.html">MEMBERS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">GALLERY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">ABOUT US</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="team-section">
+    <div class="inner-width">
+      <h1>Meet Our Team</h1>
+      <div>
+        <ul class="category" id="category">
+          <li class="division active" onclick=sort(1)>All</li>
+          <li class="division" onclick=sort(2)>Advisors</li>
+          <li class="division" onclick=sort(3)>Core Committee</li>
+          <li class="division" onclick=sort(4)>Fest Comittee</li>
+          <li class="division" onclick=sort(5)>Working Comittee</li>
+        </ul>
+      </div>
+      <div class="pers" id="members"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <div class="footer-start">
+        <p>
+          <img src="assets/logo.png" alt="" /><a href="https://futureeducation.in/"
+            style="color: inherit; font-size: 18px; margin: 10px"><img src="assets/future.jpg" alt="" /></a>
+        </p>
+      </div>
+      <div class="footer-mid">
+        <ul class="contacts">
+          <li>
+            <i class="bi bi-pin-map-fill"></i>
+            <p>
+              Sonarpur Station Rd, Mission Pally, Narendrapur, Kolkata, West
+              Bengal 700150
+            </p>
+          </li>
+          <li>
+            <i class="bi bi-envelope-fill"></i>
+            <p>estrellaproductions@teamfuture.in</p>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-end">
+        <p>FOLLOW US ON</p>
+        <ul class="socials">
+          <a href="https://www.facebook.com/estellaprod/"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/estrellaproductions/"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.youtube.com/c/estrellafiem/videos"><i class="bi bi-youtube"></i></a>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-col">
+      <p><i class="bi bi-c-circle"> </i> ESTRELLA PRODUCTIONS</p>
+      <p>Crafted with <i class="bi bi-suit-heart-fill"></i> at FIEM</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <script src="members.js"></script>
+  <script>
+    var menu_container = document.getElementById("category");
+    var btns = menu_container.getElementsByClassName("division");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+
+    function advisor() {
+      advisors.forEach((advisor) => {
+        document.getElementById(
+          "members"
+        ).innerHTML += `<div class="pe"><img src="assets/members/Advisor/${advisor.name}.jpg" onerror="this.src='assets/members/default.jpg';"><div class="p-name">${advisor.name}</div><div class="p-des">${advisor.role}</div></div>`;
+      });
+    }
+
+    function coreComittee() {
+      core_committee.forEach((cc) => {
+        document.getElementById(
+          "members"
+        ).innerHTML += `<div class="pe"><img src="assets/members/cc/${cc.name}.jpg" onerror="this.src='assets/members/default.jpg';"><div class="p-name">${cc.name}</div><div class="p-des">${cc.role}</div></div>`;
+      });
+    }
+
+    function workingComittee() {
+      working_committee.forEach((wc) => {
+        document.getElementById(
+          "members"
+        ).innerHTML += `<div class="pe"><img src="assets/members/wc/${wc.name}.jpg" onerror="this.src='assets/members/default.jpg';"><div class="p-name">${wc.name}</div><div class="p-des">${wc.role}</div></div>`;
+      });
+    }
+
+    function festComittee() {
+      fest_committee.forEach((fc) => {
+        document.getElementById(
+          "members"
+        ).innerHTML += `<div class="pe"><img src="assets/members/Fest Committee/${fc.name}.jpg" onerror="this.src='assets/members/default.jpg';"><div class="p-name">${fc.name}</div><div class="p-des">${fc.role}</div></div>`;
+      });
+    }
+
+    function sort(ch) {
+      document.getElementById("members").innerHTML="";
+      if(ch===1)
+      {
+        advisor();
+        coreComittee();
+        festComittee();
+        workingComittee();
+      }
+      else if(ch===2)
+      {
+        advisor();
+      }
+      else if(ch===3)
+      {
+        coreComittee();
+      }
+      else if(ch===4)
+      {
+        festComittee();
+      }
+      else 
+      {
+        workingComittee();
+      }
+    }
+
+    sort(1);
+  </script>
+</body>
+
+</html>

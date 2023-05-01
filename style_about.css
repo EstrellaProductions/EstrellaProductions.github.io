@@ -1,0 +1,182 @@
+.footer
+{
+  position: relative;
+}
+
+.about
+{
+  text-align: center;
+}
+
+.about h1
+{
+  color: #fec90b;
+}
+
+.about p
+{
+  color: #ddd;
+  font-size: 22px;
+}
+
+.contact
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_content
+{
+  display: flex;
+  padding: 20px;
+  border-style: solid;
+  border-color: #fec90b;
+  border-width: 3px;
+  border-radius: 10px;
+  width: fit-content;
+  justify-content: center;
+}
+
+.contact_data
+{
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: auto auto auto auto auto;
+  color: #ddd;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin: 20px;
+}
+
+.contact_data i,p
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact_data i
+{
+  font-size: 40px;
+}
+
+.contact_data p
+{
+  font-size: 22px;
+}
+
+.contact_map
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 30px;
+  color: #fec90b;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.reviews
+{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+  padding: 30px;
+}
+
+.user_review {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 30px;
+  border-style: solid;
+  border-color: #fec90b;
+  border-width: 3px;
+  border-radius: 10px;
+  min-width: 370px;
+  max-width: 370px;
+  width: 100%;
+  background-color: #000000;
+  color: #ddd;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.user_review * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.user_review img {
+  max-width: 100%;
+  vertical-align: top;
+  opacity: 0.7;
+}
+
+.user_review figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 150px 10% 15%;
+}
+
+
+.user_review blockquote {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+
+.user_review h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 3px 0;
+}
+
+.user_review h5 {
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  color: #fec90b;
+  letter-spacing: 1px;
+}
+
+
+@media screen and (max-width: 870px) {
+  .reviews {
+    grid-template-columns: auto;
+  }
+
+  .contact_content
+  {
+    flex-wrap: wrap;
+  }
+
+  .contact_data
+  {
+    grid-template-columns: auto auto auto;
+  }
+
+  .contact_data i,p
+  {
+    font-size: 15px !important;
+  }
+
+  .contact_map iframe
+  {
+    width: fit-content;
+    height: fit-content;
+  }
+}
