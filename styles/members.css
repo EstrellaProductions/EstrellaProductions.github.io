@@ -1,0 +1,105 @@
+.footer {
+  position: relative;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  column-gap: 10px;
+  padding-left: 0px;
+}
+
+.division {
+  color: #ddd;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.division.active,
+.division:hover {
+  transition: color 0.3s;
+  color: #fec90b;
+}
+
+.team-section {
+  background: black;
+  text-align: center;
+}
+
+.inner-width {
+  margin: auto;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.team-section h1 {
+  font-size: 30px;
+  color: #fec90b;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.pers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.pe {
+  margin: 30px;
+  max-width: 350px;
+  min-width: 350px;
+  padding: 40px 0;
+  transition: 0.4s;
+  border-style: solid;
+  border-color: #fec90b;
+  border-width: 3px;
+  border-radius: 10px;
+}
+
+.pe:hover {
+  background: #ddd;
+}
+
+.pe:hover > .p-name {
+  color: black;
+}
+
+.pe:hover > .p-des {
+  color: #8c0000;
+}
+
+.pe img {
+  max-width: 300px;
+  max-height: 300px;
+  aspect-ratio: 6 / 7;
+  object-fit: contain;
+}
+
+.p-name {
+  font-size: 22px;
+  font-style: bold;
+  color: #ddd;
+  margin: 16px 0;
+  text-transform: uppercase;
+}
+
+.p-des {
+  font-size: 18px;
+  font-style: italic;
+  color: #fec90b;
+}
+
+@media screen and (max-width: 870px) {
+  .pe {
+    width: 100%;
+  }
+
+  .category {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}

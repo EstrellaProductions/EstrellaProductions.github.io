@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+body {
+  height: 100%;
+  background-color: black !important;
+  font-family: "Playfair Display", serif !important;
+  color: white;
+}
