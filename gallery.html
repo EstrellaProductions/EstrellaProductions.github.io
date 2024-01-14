@@ -28,9 +28,10 @@
     <ul class="category" id="category">
       <li class="event active" onclick=sort(1)>Take One</li>
       <li class="event" onclick=sort(2)>Celluloid</li>
-      <li class="event" onclick=sort(3)>Celestra</li>
+      <li class="event" onclick=sort(3)>Cellestra</li>
       <li class="event" onclick=sort(4)>Chapter Primiera</li>
-      <li class="event" onclick=sort(5)>Photo Walk</li>
+      <li class="event" onclick=sort(5)>Food O Graphy</li>
+      <li class="event" onclick=sort(6)>Panchami Parikrama</li>
     </ul>
   </div>
 
@@ -50,7 +51,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-  <script src="scripts/gallery.js"></script>
+
   <script>
     var menu_container = document.getElementById("category");
     var btns = menu_container.getElementsByClassName("event");
@@ -62,59 +63,50 @@
       });
     }
 
-    var last_image_index = takeOne;
-    var folder_name = "takeOne";
 
-    folder_link = 'https://files.catbox.moe/eypi2z.json'
+    galleryLink = 'https://files.catbox.moe/7vrn39.json'
+
+    gallery = null
+
+    fetch(galleryLink)
+      .then(response => response.json())
+      .then(data => {
+        gallery = data
+        sort(1)
+      })
+      .catch(error => {
+        console.error('Error during fetch operation:', error);
+      });
 
     function sort(ch) {
       if (ch === 1) {
-        showFromLink()
+        run(gallery.takeone)
       }
       else if (ch === 2) {
-        last_image_index = celluloid;
-        folder_name = "celluloid";
-        run();
+        run(gallery.celluloid);
       }
       else if (ch === 3) {
-        last_image_index = celestra;
-        folder_name = "celestra";
-        run();
+        run(gallery.cellestra);
       }
       else if (ch === 4) {
-        last_image_index = primiera;
-        folder_name = "primiera"
-        run();
+        run(gallery.chapter_primiera);
+      }
+      else if (ch === 5) {
+        run(gallery.foodography);
       }
       else {
-        last_image_index = photowalk;
-        folder_name = "photowalk";
-        run();
+        run(gallery.panchami_parikrama)
       }
     }
 
-    function showFromLink() {
-      fetch(folder_link)
-        .then(response => response.json())
-        .then(data => {
-          data.links.forEach(link => {
-            document.getElementById(
-              "assets"
-            ).innerHTML += `<div class="gallery_picture"><a class="lightbox" href="${link.url}"><img src="${link.url}" alt="Gallery Image"></a></div>`;
-          });
-        })
-        .catch(error => {
-          console.error('Error during fetch operation:', error);
-        });
-    }
-
-    function run() {
+    function run(event) {
       document.getElementById("assets").innerHTML = "";
-      for (let i = 0; i <= last_image_index; i++) {
+
+      event.forEach(image => {
         document.getElementById(
           "assets"
-        ).innerHTML += `<div class="gallery_picture"><a class="lightbox" href="assets/gallery/${folder_name}/${i}.JPG"><img src="assets/gallery/${folder_name}/${i}.JPG" alt="Gallery Image"></a></div>`;
-      }
+        ).innerHTML += `<div class="gallery_picture"><a class="lightbox" href="${image.url}"><img src="${image.url}" alt="Gallery Image"></a></div>`;
+      });
 
       baguetteBox.run(".tz-gallery");
       $(".portfolio-menu ul li").click(function () {
@@ -137,8 +129,6 @@
         });
       });
     }
-
-    sort(1)
   </script>
 </body>
 
