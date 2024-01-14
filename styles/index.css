@@ -12,11 +12,21 @@ body {
 }
 
 .text-top {
-  font-size: 4.5vh;
+  font-size: 6vh;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Add a subtle text shadow */
 }
 
 .text-bottom {
-  font-size: 4.5vh;
+  font-size: 6vh;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Add a subtle text shadow */
+}
+
+@media screen and (max-width: 870px) {
+  .text-top {
+    font-size: 4vh;
+  }
+
+  .text-bottom {
+    font-size: 4vh;
+  }
 }

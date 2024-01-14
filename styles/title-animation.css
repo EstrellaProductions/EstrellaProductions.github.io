@@ -22,7 +22,7 @@
 
 .animated-title {
   color: #ddd;
-  height: 95vmin;
+  height: 90vmin;
   left: 50%;
   position: absolute;
   top: 50%;
@@ -33,6 +33,7 @@
 
 .animated-title > div {
   height: 50%;
+  overflow: hidden;
   position: absolute;
   width: 100%;
 }
