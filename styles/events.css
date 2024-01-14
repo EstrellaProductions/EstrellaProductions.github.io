@@ -38,10 +38,6 @@
   transform: scale(1.05);
 }
 
-.event-img {
-  max-width: inherit;
-}
-
 .event-content {
   padding: 10px;
 }
