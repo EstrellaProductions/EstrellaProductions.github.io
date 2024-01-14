@@ -21,7 +21,7 @@ const header = `
             <a class="nav-link" href="productions.html">PRODUCTIONS</a>
           </li>
           <li class="nav-item">
-            <a class="d-none d-lg-block" href="#"><img src="assets/logo.png" id="nav-img-full" /></a>
+            <a class="d-none d-lg-block" href="index.html"><img src="assets/logo.png" id="nav-img-full" /></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="members.html">MEMBERS</a>
