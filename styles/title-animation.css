@@ -33,7 +33,6 @@
 
 .animated-title > div {
   height: 50%;
-  overflow: hidden;
   position: absolute;
   width: 100%;
 }
