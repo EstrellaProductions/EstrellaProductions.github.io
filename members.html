@@ -54,7 +54,7 @@
     crossorigin="anonymous"></script>
 
   <script>
-    membersLink = 'https://files.catbox.moe/adv63u.json'
+    membersLink = 'https://files.catbox.moe/t4x0e4.jpeg'
 
     members = null
 
@@ -107,7 +107,7 @@
       members.working_committee.forEach((wc) => {
         document.getElementById(
           "members"
-        ).innerHTML += `<div class="pe"><img src="${wc.url}" onerror="this.src='default.jpg';"><div class="p-name">${wc.name}</div><div class="p-des">${wc.position}</div></div>`;
+        ).innerHTML += `<div class="pe"><img src="${wc.url}" onerror="this.src='default.jpg';"><div class="p-name">${wc.name}</div><div class="p-des"><a href='${wc.position}'>GO TO FORM</a></div></div>`;
       });
     }
 
